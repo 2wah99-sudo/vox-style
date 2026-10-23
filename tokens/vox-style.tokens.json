@@ -1,0 +1,147 @@
+{
+  "$description": "Vox-style editorial collage tokens. Sizes in px at 1920x1080 (x2 for 4K). Frames at 30 fps unless noted. Measured from the reference videos; see docs/.",
+  "canvas": { "width": 1920, "height": 1080, "fps": 30, "render4kScale": 2 },
+  "clock": {
+    "drawingsPerSecond": 12,
+    "holdPattern30fps": [2, 3],
+    "slowCadenceFps": 8,
+    "holdJitter": { "hz": 6, "ampPx": [0.5, 3], "scalePct": [0.2, 0.5], "textMultiplier": 1.5 },
+    "paperBoilFrames": { "ink": [3, 4], "scrapbook": 15, "inkBlackCard": 4 },
+    "wiggle": { "hz": 0.8, "ampPx": [4, 8] }
+  },
+  "easing": {
+    "wipe": "easeInOutCubic",
+    "settle": "easeOutCubic",
+    "land": "easeOutQuart",
+    "punchOut": "easeOutExpo",
+    "reveal": "easeInOutQuad",
+    "underline": "easeOutCubic",
+    "exit": "easeInCubic",
+    "pushOut": "easeInExpo",
+    "pushIn": "easeOutQuint",
+    "pop": { "curve": "easeOutBack", "s": [1.0, 3.0] },
+    "linear": "linear"
+  },
+  "duration": {
+    "cursorHoldFrames": [1, 17],
+    "titleWipeFrames": [20, 29],
+    "labelWipeFrames": [10, 16],
+    "settleFrames": [6, 8],
+    "steppedRevealFrames": [12, 15],
+    "exitFrames": [3, 8],
+    "captionFadeFrames": [5, 9],
+    "bulletRiseFrames": 7,
+    "bulletSpinFrames": 12,
+    "barStaggerFrames": 5,
+    "slideshowPeriodFrames": 30,
+    "carouselPeriodFrames": 20,
+    "fadeToBlackFrames": 49,
+    "blackTailFrames": 23
+  },
+  "typeOn": {
+    "headlineLetterFrames": 2,
+    "headlineWordFrames": 4,
+    "captionBlockCharsPerDrawing": 2.5,
+    "quoteCharsPerSecond": 34,
+    "quoteWordFrames": 2.5
+  },
+  "dialects": {
+    "archive": {
+      "color": {
+        "paperCenter": "#F7EDE4",
+        "paperCorner": "#C8C3BF",
+        "vignette": { "start": 0.32, "cornerLumaPct": -18 },
+        "grid": { "pitchPx": 35, "lumaDelta": -2 },
+        "accent": "#F6FA0E",
+        "accentShadow": "#E3EF0A",
+        "accentCaption": "#E8F010",
+        "inkOnAccent": "#2B2010",
+        "inkQuote": "#3A292C",
+        "inkSecondary": "#554949",
+        "inkMuted": "#6B6361",
+        "inkSource": "#908784",
+        "chartBar": "#31312F",
+        "markerRed": "#7E1029",
+        "darkBg": "#080705",
+        "darkLine": "#EFECE5"
+      },
+      "font": {
+        "label": "Gelasio",
+        "title": "Newsreader",
+        "numerals": "Playfair Display"
+      },
+      "type": {
+        "titleBox": { "heightPx": 138, "fontPx": 98, "padding": [33, 51, 36, 54], "topPctH": 16.5 },
+        "subtitle": { "fontPx": 46, "gapBelowBoxPx": 57 },
+        "calloutLabel": { "heightPx": 102, "fontPx": 69, "style": "italic" },
+        "mapLabel": { "heightPx": 162, "capPx": 84, "weight": 700 },
+        "footageCaption": { "fontPx": 52, "style": "bold italic", "baselinePctH": 90, "bulletPx": 57 },
+        "quote": { "fontPx": 56, "leadingPx": 68, "widthPctW": 38, "leftPctW": 21, "align": "justify" },
+        "yearNumeralPx": [117, 156]
+      },
+      "cutout": { "offsetShadowPx": [18, 2], "photoRimPx": [6, 6], "cardRadiusPx": 24 },
+      "glow": { "sigmaPx": 40 }
+    },
+    "ink": {
+      "color": {
+        "paper": "#FDFDFD",
+        "blackCard": "#010101",
+        "headline": "#222931",
+        "cream": "#E9E9D0",
+        "accent": "#E94812",
+        "pencil": "#E07964",
+        "echo": "#F1AE9F",
+        "accentOnBlack": "#B04C35",
+        "kraft": "#F3DBB9",
+        "tape": "#D8C9A0"
+      },
+      "font": { "headline": "EB Garamond", "caption": "Inter" },
+      "type": {
+        "heroCapPx": [156, 257],
+        "heroAboveFramePct": 41,
+        "inkBleedLineCapPx": 171,
+        "quoteCardCapPx": 117,
+        "captionBlock": { "capPx": 24, "linePx": 32, "columnsPctW": [2.3, 15.2], "bottomMarginPctH": 8.7 }
+      },
+      "stroke": { "pencilWidthPx": [7, 9], "headPxPerDrawing": [300, 450], "lifespanFrames": [12, 16], "penWidthPx": 3 },
+      "halftone": { "periodPx": 5.5, "angleDeg": 45 },
+      "flashMontageFrames25fps": [4, 4, 7, 4, 4, 6, 4, 7, 4, 4, 6, 4, 2, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+    },
+    "scrapbook": {
+      "color": {
+        "table": "#FFFFFF",
+        "paperCrumpled": "#E9E8E9",
+        "gridCool": { "paper": "#CFCFD7", "line": "#ABA9B2", "pitchPx": 29 },
+        "gridLight": { "paper": "#F1F3F8", "line": "#D6D8DE", "pitchPx": 25 },
+        "pastelSalmon": "#E4ADA2",
+        "pastelSalmonGrid": "#FAC9BE",
+        "pastelGreen": "#BFD4B3",
+        "pastelMint": "#AEE192",
+        "paperGreen": "#90C372",
+        "paperCoral": "#F68168",
+        "tapeOlive": "#B9BA73",
+        "hero": "#E5533A",
+        "ink": "#121213",
+        "brush": "#2E2E2E",
+        "spotBlue": "#5C5CD0",
+        "spotTeal": "#7FCCCD",
+        "markerRed": "#D44A55"
+      },
+      "font": { "headline": "Inter", "display": "Oswald" },
+      "type": {
+        "h1": { "fontPx": 122, "capPx": 89, "lineHeight": 0.93, "trackingEm": -0.025 },
+        "h2": { "fontPx": 90 },
+        "brushLabel": { "capPx": 34, "barPx": 80, "trackingEm": 0.1 },
+        "displayWordCapPx": [236, 294]
+      },
+      "steppedDropIn": [{ "scale": 1.85, "holdFrames": 8 }, { "scale": 1.27, "holdFrames": 5 }, { "scale": 1.0 }],
+      "shadowDithered": { "opacityAtEdge": 0.75, "offsetPx": [8, 15], "falloffPx": [150, 240], "noiseSigma": 18 }
+    },
+    "postcard": {
+      "color": { "paper": "#DFE0DB", "accent": "#F6E70F", "sticker": "#FFFFFF", "title": "#26873A" },
+      "cutout": { "stickerPx": 14, "accentOutlinePx": 13 },
+      "dolly": { "frames24fps": 99, "startScale": 1.88, "depth": { "paper": 1.28, "landmark": 1.0, "sun": 0.9, "vehicles": [0.66, 0.85] } },
+      "sun": { "diameterPctH": 50, "growFrames24fps": 24 }
+    }
+  }
+}
